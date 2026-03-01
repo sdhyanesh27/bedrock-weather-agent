@@ -25,8 +25,7 @@ Step 2: Ensure Python is Installed
 On macOS, you may need to use python3 and pip3 instead of python and pip. You can create aliases to simplify this, by running these commands on your IDE Terminal: alias python='python3' && alias pip='pip3'
 In your IDE terminal, run these commands:
 
-1
-2
+
 # Check Python version (should be 3.7 or higher)
 python --version
 
@@ -38,11 +37,6 @@ Choose one of these methods:
 Option A: AWS CLI (Recommended)
 In your IDE terminal, run these commands:
 
-1
-2
-3
-4
-5
 # Install AWS CLI if not already installed
 # Visit: https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
@@ -58,9 +52,6 @@ Default output format: json
 Option B: Environment Variables
 In your IDE terminal, run these commands:
 
-1
-2
-3
 export AWS_ACCESS_KEY_ID=your_access_key_here
 export AWS_SECRET_ACCESS_KEY=your_secret_key_here
 export AWS_DEFAULT_REGION=us-west-2
@@ -73,20 +64,6 @@ Without the correct IAM permissions, your agent won't work! This is a critical s
 Step 5: Create Project Directory
 In your IDE terminal, run these commands:
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
 # Create and navigate to project directory
 mkdir agentic-ai-workshop
 cd agentic-ai-workshop
@@ -107,8 +84,7 @@ You should see (.venv) in your terminal prompt indicating the virtual environmen
 Step 6: Install Dependencies
 In your IDE terminal, run these commands:
 
-1
-2
+
 # Install required packages
 pip install boto3>=1.34.0 streamlit>=1.28.0 requests>=2.31.0 Pillow>=10.0.0
 
@@ -117,11 +93,6 @@ This will take a minute or two to download and install all the packages.
 Step 7: Verify Your Setup
 In your IDE terminal, run these commands:
 
-1
-2
-3
-4
-5
 # Test AWS connection
 aws sts get-caller-identity
 
@@ -148,9 +119,6 @@ bedrock:ListFoundationModels
 Virtual environment issues
 In your IDE terminal, run these commands:
 
-1
-2
-3
 # If activation fails, try:
 python -m venv --clear .venv
 source .venv/bin/activate
@@ -158,38 +126,12 @@ source .venv/bin/activate
 Package installation fails
 In your IDE terminal, run these commands:
 
-1
-2
-3
 # Try upgrading pip first
 pip install --upgrade pip
 pip install boto3>=1.34.0 streamlit>=1.28.0 requests>=2.31.0 Pillow>=10.0.0
 
 Required AWS Permissions
 Your AWS user needs these minimum permissions:
-
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
 {
     "Version": "2012-10-17",
     "Statement": [
